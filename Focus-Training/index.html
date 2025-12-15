@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FOCUS TRAINING | Instructional Design Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#f0f9ff',
+                100: '#e0f2fe',
+                200: '#bde0fe', // Icy Blue
+                300: '#a2d2ff', // Sky Blue
+                400: '#8ecae6',
+                500: '#a2d2ff', // Using Sky Blue as primary brand color
+                600: '#219ebc', // Darker blue for contrast
+                700: '#023047',
+                900: '#0c4a6e',
+              },
+              // Custom Palette mapped to Tailwind utility names
+              thistle: '#cdb4db',
+              'pastel-petal': '#ffc8dd',
+              'baby-pink': '#ffafcc',
+              'icy-blue': '#bde0fe',
+              'sky-blue': '#a2d2ff',
+              mint: '#c8f7d4',
+              
+              slate: {
+                850: '#1e293b',
+              }
+            },
+            fontFamily: {
+              sans: ['var(--ff-body)', 'Inter', 'sans-serif'],
+              heading: ['var(--ff-heading)', 'Poppins', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        /* Typography */
+        --ff-heading: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        --ff-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        
+        /* SCALED UP SIZES */
+        --base-font-size: 18px; /* Increased from 16px */
+        --heading-scale-1: 3rem; /* Increased for hierarchy */
+        --heading-scale-2: 2.25rem; /* Increased for hierarchy */
+        --heading-scale-3: 1.75rem; 
+        --body-size: 1rem;
+        --line-height-body: 1.6;
+
+        /* Color Palette Tokens */
+        --thistle: #cdb4db;
+        --pastel-petal: #ffc8dd;
+        --baby-pink: #ffafcc;
+        --icy-blue: #bde0fe;
+        --sky-blue: #a2d2ff;
+        --mint: #c8f7d4;
+        --text: #111111;
+      }
+
+      html {
+        font-size: var(--base-font-size); /* Scales all rem units including Tailwind */
+      }
+
+      body {
+        font-family: var(--ff-body);
+        font-size: var(--body-size);
+        line-height: var(--line-height-body);
+        color: var(--text);
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: var(--ff-heading);
+        line-height: 1.2;
+        margin: 0 0 0.8rem 0;
+      }
+
+      h1 { font-weight: 700; font-size: var(--heading-scale-1); }
+      h2 { font-weight: 600; font-size: var(--heading-scale-2); }
+      h3 { font-weight: 600; font-size: var(--heading-scale-3); }
+      
+      p, li, label { font-size: var(--body-size); font-weight: 400; }
+      .small { font-size: 0.875rem; }
+      .action-verb { font-weight: 700; text-transform: uppercase; }
+      
+      /* Utility for CYOA buttons */
+      .choice-btn {
+        display: block;
+        padding: 16px 20px;
+        margin: 12px 0;
+        border-radius: 12px;
+        background: white;
+        border: 1px solid #e2e8f0;
+        color: var(--text);
+        text-align: left;
+        transition: all 0.2s;
+        width: 100%;
+        font-size: 1.05rem;
+      }
+      .choice-btn:hover {
+        background: var(--icy-blue);
+        border-color: var(--sky-blue);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "recharts": "https://esm.sh/recharts@^3.5.1",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-slate-50 text-slate-900 antialiased">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
